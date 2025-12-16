@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,54 @@
 </head>
 
 <body>
-    這是我的Github網站_廖志邦 3B232005
-</body>
 
+    <!-- 名字與學號 -->
+    <h1>廖志邦　3B232005</h1>
+    <h2>菜菜撈撈<h2>
+
+    <!-- 第一顆按鈕 -->
+    <button onclick="sayHello()">拜託按我</button>
+
+    <!-- 第二顆按鈕 -->
+    <button onclick="addButton()">新增按鈕</button>
+
+    <!-- 第三顆按鈕 -->
+    <button onclick="removeButton()">刪除按鈕</button>
+
+    <br><br>
+
+    <!-- 放新增按鈕的地方 -->
+    <div id="buttonArea"></div>
+
+    <script>
+        // 第一顆按鈕功能
+        function sayHello() {
+            alert("你好!!!");
+        }
+
+        // 新增按鈕
+        function addButton() {
+            const newBtn = document.createElement("button");
+            newBtn.textContent = "新按鈕";
+            newBtn.id = "newButton";
+
+            newBtn.onclick = function () {
+                alert("這是新按鈕");
+            };
+
+            document.getElementById("buttonArea").appendChild(newBtn);
+        }
+
+        // 刪除按鈕
+        function removeButton() {
+            const btn = document.getElementById("newButton");
+            if (btn) {
+                btn.remove();
+            } else {
+                alert("目前沒有可以刪除的按鈕");
+            }
+        }
+    </script>
+
+</body>
 </html>
