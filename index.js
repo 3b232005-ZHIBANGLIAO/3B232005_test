@@ -6,4 +6,4 @@ const p = document.createElement("p");
 p.textContent = "動態文字段落。";
 document.body.appendChild(p);
 
-document.getElementById("heading").innerHTML = "<h1>老天保佑這學期歐趴!!!</h1>"
+document.getElementById("heading").innerHTML = "<h1>老天保佑這學期歐趴!!!</h1>";
